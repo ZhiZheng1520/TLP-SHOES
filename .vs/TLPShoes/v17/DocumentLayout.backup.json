@@ -1,0 +1,343 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\data\\tlpshoesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\data\\tlpshoesuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\areas\\identity\\data\\tlpshoescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\areas\\identity\\data\\tlpshoescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|c:\\users\\waiho\\source\\repos\\tlpshoes\\tlpshoes\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EE77B23-1762-4ACF-9FC3-1FE0365DACD9}|TLPShoes\\TLPShoes.csproj|solutionrelative:tlpshoes\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\appsettings.json",
+              "RelativeDocumentMoniker": "TLPShoes\\appsettings.json",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\appsettings.json",
+              "RelativeToolTip": "TLPShoes\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-10T14:55:35.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Program.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Program.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Program.cs*",
+              "RelativeToolTip": "TLPShoes\\Program.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:54:46.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "TLPShoes\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:54:02.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TLPShoes\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:53:55.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:53:22.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:53:17.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAwwMcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:53:03.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml*",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Register.cshtml*",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAwwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:52:56.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:50:32.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:52:42.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml*",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Logout.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:52:34.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs*",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs*",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAwwKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:52:27.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml*",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Pages\\Account\\Login.cshtml*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:50:10.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TLPShoesUser.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Data\\TLPShoesUser.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Data\\TLPShoesUser.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Data\\TLPShoesUser.cs*",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Data\\TLPShoesUser.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:51:25.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TLPShoesContext.cs",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Data\\TLPShoesContext.cs",
+              "RelativeDocumentMoniker": "TLPShoes\\Areas\\Identity\\Data\\TLPShoesContext.cs",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Areas\\Identity\\Data\\TLPShoesContext.cs",
+              "RelativeToolTip": "TLPShoes\\Areas\\Identity\\Data\\TLPShoesContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:49:52.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "TLPShoes\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "TLPShoes\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-10T14:49:06.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "TLPShoes\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:46:17.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "TLPShoes\\Views\\Home\\Home.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:46:16.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Customer\\Index.cshtml",
+              "RelativeDocumentMoniker": "TLPShoes\\Views\\Customer\\Index.cshtml",
+              "ToolTip": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\Views\\Customer\\Index.cshtml",
+              "RelativeToolTip": "TLPShoes\\Views\\Customer\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T14:46:14.267Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
