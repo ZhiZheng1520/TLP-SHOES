@@ -1,5 +1,55 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Supplier Management";
 }
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <h2>Supplier Management</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Suppliers</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <i class="bi bi-people"></i> Dashboard
+                    </h5>
+                    <p class="card-text">Access the supplier dashboard.</p>
+                    <a asp-controller="Supplier" asp-action="Dashboard" class="btn btn-primary">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <i class="bi bi-plus-circle"></i> Products
+                    </h5>
+                    <p class="card-text">Edit or add new products here.</p>
+                    <a asp-controller="Supplier" asp-action="EditProducts" class="btn btn-primary">Manage Products</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <i class="bi bi-file-earmark-text"></i> Edit Profile
+                    </h5>
+                    <p class="card-text">Edit your supplier profile.</p>
+                    <a asp-controller="Supplier" asp-action="EditProfile" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

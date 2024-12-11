@@ -17,95 +17,131 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TLPShoes
 build_property.RootNamespace = TLPShoes
-build_property.ProjectDir = C:\Users\waiho\source\repos\TLPShoes\TLPShoes\
+build_property.ProjectDir = C:\Users\tanzh\OneDrive\Desktop\TLP-SHOES\TLPShoes\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\waiho\source\repos\TLPShoes\TLPShoes
+build_property.MSBuildProjectDirectory = C:\Users\tanzh\OneDrive\Desktop\TLP-SHOES\TLPShoes
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/_AuthLayout.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/_AuthLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX0F1dGhMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Customer/Index.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Home/Home.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Home/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Home/Index.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Home/Privacy.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Home/Service.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Home/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Manager/Index.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/DeclinedForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxEZWNsaW5lZEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Shared/Error.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/PriceApproval.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcmljZUFwcHJvdmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/PriceApprovalApprove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcmljZUFwcHJvdmFsQXBwcm92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/PriceApprovalDeclined.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcmljZUFwcHJvdmFsRGVjbGluZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/PriceApprovalPending.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxQcmljZUFwcHJvdmFsUGVuZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Manager/StockManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxTdG9ja01hbmFnZW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Supplier/Index.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Supplier/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Supplier/EditProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Supplier/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Supplier/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/_ViewImports.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/_ViewStart.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/waiho/source/repos/TLPShoes/TLPShoes/Views/Shared/_Layout.cshtml]
+[C:/Users/tanzh/OneDrive/Desktop/TLP-SHOES/TLPShoes/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ybkdi6akk5

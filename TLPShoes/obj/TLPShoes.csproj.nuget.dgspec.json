@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\TLPShoes.csproj": {}
+    "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\TLPShoes.csproj": {
+    "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\TLPShoes.csproj",
+        "projectUniqueName": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
         "projectName": "TLPShoes",
-        "projectPath": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\TLPShoes.csproj",
-        "packagesPath": "C:\\Users\\waiho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\waiho\\source\\repos\\TLPShoes\\TLPShoes\\obj\\",
+        "projectPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+        "packagesPath": "C:\\Users\\tanzh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\waiho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tanzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
