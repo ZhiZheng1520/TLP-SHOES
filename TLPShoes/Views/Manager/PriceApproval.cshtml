@@ -26,7 +26,8 @@
 							<ul>
 								<li><a asp-area="" asp-controller="Manager" asp-action="Index">HOME</a></li>
 								<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
-								<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Stock Management</a></li>
+								<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
+								<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Discount Logic</a></li>
 							</ul>
 						</div>
 					</div>
@@ -68,11 +69,8 @@
 				<div class="row row-pb-lg">
 					<div class="col-md-12">
 						<div class="product-name d-flex">
-						<div class="one-forth text-left px-4">
-							<span>Item Details</span>
-						</div>
-							<div class="one-eight text-center">
-								<span>Stock</span>
+							<div class="one-forth text-left px-4">
+								<span>Item Details</span>
 							</div>
 							<div class="one-eight text-left">
 								<span>Category</span>
@@ -93,7 +91,7 @@
 								<span>Status</span>
 							</div>
 							<div class="one-eight text-center">
-								<span>Remove</span>
+								<span>Action</span>
 							</div>
 						</div>
 						
@@ -140,7 +138,7 @@
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-										<span class="price">@item.Supply_Details.FirstOrDefault().quantity</span>
+										<span class="price">@item.quantity</span>
 										</div>
 									</div>
 
@@ -158,13 +156,13 @@
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-										<form asp-action="ApproveStatus" asp-controller="Managers" asp-route-FlowerId="@item.sku">
+										<form asp-action="ApproveStatus" asp-controller="Managers" asp-route-sku="@item.sku">
 											<td><button class="changeStatusButton" style="background-color: #88c8bc;"></button></td>
 											<td><button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="EditData" asp-controller="Flowers" asp-route-FlowerId="@item.sku"></button></td>
 										</form>
 										</div>
 									</div>
-								</div> <!-- Missing closing div for .product-cart -->
+								</div>
 							}
 						}
 					</div>
