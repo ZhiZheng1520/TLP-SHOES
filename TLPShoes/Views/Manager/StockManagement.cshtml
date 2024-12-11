@@ -4,7 +4,6 @@
 	ViewData["Title"] = "Index";
 }
 
-<div id="page">
 	<nav class="colorlib-nav" role="navigation">
 		<div class="top-menu">
 			<div class="container">
@@ -24,9 +23,10 @@
 				<div class="row">
 					<div class="col-sm-12 text-left menu-1">
 						<ul>
-							<li><a asp-area="" asp-controller="Manager" asp-action="Index">HOME</a></li>
-							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">PRICE APPROVAL MANAGEMENT</a></li>
-							<li><a href="women.html">Stock Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
 						</ul>
 					</div>
 				</div>
@@ -38,23 +38,66 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span><span></span>Pending</span></p>
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span><span></span>Stock Management</span></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="card-body">
-		<h5 class="card-title">Sales <span>| Today</span></h5>
-
-		<div class="d-flex align-items-center">
-			<div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-				<i class="bi bi-cart"></i>
-			</div>
-			<div class="ps-3">
-				<h6>145</h6>
-				<span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+		<div class="colorlib-product">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+							<a href="#" class="prod-img">
+								<img src="~/assets/images/item-1.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+							</a>
+							<div class="desc">
+								<h2><a href="#">Women's Boots Shoes Maca</a></h2>
+								<span class="price">$139.00</span>
+								<span class="price">$139.00</span>
+								<span class="price">$139.00</span>
+								<span class="price">Button</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+							<a href="#" class="prod-img">
+						<img src="~/assets/images/item-2.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+							</a>
+							<div class="desc">
+								<h2><a href="#">Women's Minam Meaghan</a></h2>
+								<span class="price">$139.00</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+							<a href="#" class="prod-img">
+						<img src="~/assets/images/item-3.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+							</a>
+							<div class="desc">
+								<h2><a href="#">Men's Taja Commissioner</a></h2>
+								<span class="price">$139.00</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+							<a href="#" class="prod-img">
+						<img src="~/assets/images/item-4.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
+							</a>
+							<div class="desc">
+								<h2><a href="#">Russ Men's Sneakers</a></h2>
+								<span class="price">$139.00</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>

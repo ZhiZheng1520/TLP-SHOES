@@ -15,7 +15,6 @@ namespace TLPShoes.Data
         }
 
         public DbSet<Supply_Form> Supply_Form { get; set; }
-        public DbSet<Supply_Details> Supply_Details { get; set; }
         public DbSet<Notification> Notification { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -265,113 +264,82 @@ namespace TLPShoes.Data
                 }
             );
 
-            // Add Seed data here
-            modelBuilder.Entity<Supply_Form>().HasData(
-                new Supply_Form
-                {
-                    sku = "SK-001",
-                    username = "001",
-                    item_name = "Ultraboost",
-                    price = 200,
-                    category = "sport",
-                    image_path = "~/assets/images/item-6.jpg",
-                    date_created = DateTime.Parse("2024-12-10 15:42:34"),
-                    approval_status = "declined"
-                },
-                new Supply_Form
-                {
-                    sku = "SK-002",
-                    username = "002",
-                    item_name = "Jordan",
-                    price = 300,
-                    category = "dress",
-                    image_path = "~/assets/images/item-7.jpg",
-                    date_created = DateTime.Parse("2024-12-11 10:25:47"),
-                    approval_status = "approved"
-                },
-                new Supply_Form
-                {
-                    sku = "SK-003",
-                    username = "003",
-                    item_name = "Nike Scandal",
-                    price = 800,
-                    category = "casual",
-                    image_path = "~/assets/images/item-8.jpg",
-                    date_created = DateTime.Parse("2024-12-12 08:13:22"),
-                    approval_status = "pending"
-                },
-                new Supply_Form
-                {
-                    sku = "SK-004",
-                    username = "004",
-                    item_name = "adidas",
-                    price = 75,
-                    category = "casual",
-                    image_path = "~/assets/images/item-14.jpg",
-                    date_created = DateTime.Parse("2024-12-13 18:50:05"),
-                    approval_status = "approved"
-                },
-                new Supply_Form
-                {
-                    sku = "SK-005",
-                    username = "005",
-                    item_name = "T-shirt",
-                    price = 25.00m,
-                    category = "dress",
-                    image_path = "~/assets/images/item-13.jpg",
-                    date_created = DateTime.Parse("2024-12-14 20:34:59"),
-                    approval_status = "pending"
-                }
-            );
+			// Add Seed data here
+			modelBuilder.Entity<Supply_Form>().HasData(
+				new Supply_Form
+				{
+					sku = "SK-001",
+					username = "001",
+					item_name = "Ultraboost",
+					price = 200,
+					category = "sport",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-6.jpg",
+					date_created = DateTime.Parse("2024-12-10 15:42:34"),
+					approval_status = "declined"
+				},
+				new Supply_Form
+				{
+					sku = "SK-002",
+					username = "002",
+					item_name = "Jordan",
+					price = 300,
+					category = "dress",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-7.jpg",
+					date_created = DateTime.Parse("2024-12-11 10:25:47"),
+					approval_status = "approved"
+				},
+				new Supply_Form
+				{
+					sku = "SK-003",
+					username = "003",
+					item_name = "Nike Scandal",
+					price = 800,
+					category = "casual",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-8.jpg",
+					date_created = DateTime.Parse("2024-12-12 08:13:22"),
+					approval_status = "pending"
+				},
+				new Supply_Form
+				{
+					sku = "SK-004",
+					username = "004",
+					item_name = "adidas",
+					price = 75,
+					category = "casual",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-14.jpg",
+					date_created = DateTime.Parse("2024-12-13 18:50:05"),
+					approval_status = "approved"
+				},
+				new Supply_Form
+				{
+					sku = "SK-005",
+					username = "005",
+					item_name = "T-shirt",
+					price = 25.00m,
+					category = "dress",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-13.jpg",
+					date_created = DateTime.Parse("2024-12-14 20:34:59"),
+					approval_status = "pending"
+				}
+			);
 
-            // Seed data for Supply_Details
-            modelBuilder.Entity<Supply_Details>().HasData(
-                new Supply_Details
-                {
-                    sdu = "SD-001",
-                    sku = "SK-001",  // Foreign Key reference to Supply_Form
-                    quantity = 50,
-                    size = 7  // Size as an integer
-                },
-                new Supply_Details
-                {
-                    sdu = "SD-002",
-                    sku = "SK-001",  // Foreign Key reference to Supply_Form
-                    quantity = 150,
-                    size = 8
-                },
-                new Supply_Details
-                {
-                    sdu = "SD-003",
-                    sku = "SK-003",  // Foreign Key reference to Supply_Form
-                    quantity = 200,
-                    size = 8
-                },
-                new Supply_Details
-                {
-                    sdu = "SD-004",
-                    sku = "SK-002",  // Foreign Key reference to Supply_Form
-                    quantity = 250,
-                    size = 10
-                },
-                new Supply_Details
-                {
-                    sdu = "SD-005",
-                    sku = "SK-004",  // Foreign Key reference to Supply_Form
-                    quantity = 300,
-                    size = 11
-                },
-                new Supply_Details
-                {
-                    sdu = "SD-006",
-                    sku = "SK-005",  // Foreign Key reference to Supply_Form
-                    quantity = 300,
-                    size = 12
-                }
-            );
-
-            // Seed data for Discount_Logic
-            modelBuilder.Entity<Discount_Logic>().HasData(
+			// Seed data for Discount_Logic
+			modelBuilder.Entity<Discount_Logic>().HasData(
                 new Discount_Logic
                 {
                     dlu = "DL-001", // You can adjust this to match your unique primary key strategy

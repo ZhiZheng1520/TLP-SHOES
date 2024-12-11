@@ -20,6 +20,12 @@ namespace TLPShoes.Controllers
 			return View();
 		}
 
+		public IActionResult DiscountLogic()
+		{
+			return View();
+		}
+
+
 		public IActionResult StockManagement()
 		{
 			return View();
@@ -27,8 +33,8 @@ namespace TLPShoes.Controllers
 
 		public async Task<IActionResult> PriceApproval()
 		{
-			// Fetch Supply_Form along with related Supply_Details
-			var Supply_Form = await _context.Supply_Form.Include(s => s.Supply_Details).ToListAsync();
+			// Fetch Supply_Form
+			var Supply_Form = await _context.Supply_Form.ToListAsync();
 
 			// Calculate counts for each approval status
 			var pendingCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "pending");
@@ -47,7 +53,8 @@ namespace TLPShoes.Controllers
 		public async Task<IActionResult> PriceApprovalPending()
 		{
 
-			List<Supply_Form> Supply_Form = await _context.Supply_Form.ToListAsync();
+			// Fetch Supply_Form
+			var Supply_Form = await _context.Supply_Form.ToListAsync();
 
 			// Calculate counts for each approval status
 			var pendingCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "pending");
@@ -65,7 +72,8 @@ namespace TLPShoes.Controllers
 
 		public async Task<IActionResult> PriceApprovalApprove()
 		{
-			List<Supply_Form> Supply_Form = await _context.Supply_Form.ToListAsync();
+			// Fetch Supply_Form
+			var Supply_Form = await _context.Supply_Form.ToListAsync();
 
 			// Calculate counts for each approval status
 			var pendingCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "pending");
@@ -82,7 +90,8 @@ namespace TLPShoes.Controllers
 
 		public async Task<IActionResult> PriceApprovalDeclined()
 		{
-			List<Supply_Form> Supply_Form = await _context.Supply_Form.ToListAsync();
+			// Fetch Supply_Form
+			var Supply_Form = await _context.Supply_Form.ToListAsync();
 
 			// Calculate counts for each approval status
 			var pendingCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "pending");
@@ -97,10 +106,10 @@ namespace TLPShoes.Controllers
 			return View(Supply_Form);
 		}
 
-        public IActionResult DeclinedForm()
-        {
-            return View();
-        }
+		public IActionResult DeclinedForm()
+		{
+			return View();
+		}
 
 		// Action to approve an item
 		[HttpPost]
