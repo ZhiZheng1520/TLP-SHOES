@@ -39,7 +39,6 @@ namespace TLPShoes.Models
 
 		[Required]
 		[Range(7, 14, ErrorMessage = "Size must be between 7 and 14.")]
-		[StringLength(10)]  // Adjust size length if needed
 		public int size { get; set; }  // Size of the item (e.g., Small, Medium, Large)
 
 		[StringLength(255)]  // Optional: Adjust the length as needed

@@ -1,0 +1,170 @@
+﻿@model List<Supply_Form>
+@using Microsoft.AspNetCore.Identity
+@using TLPShoes.Areas.Identity.Data
+
+@inject SignInManager<TLPShoesUser> SignInManager
+@inject UserManager<TLPShoesUser> UserManager
+
+@{
+	
+}
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-7 col-md-9">
+							<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+						</div>
+						<div class="col-sm-5 col-md-3">
+							<form action="#" class="search-wrap">
+								<div class="form-group">
+									<input type="search" class="form-control search" placeholder="Search">
+									<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 text-left menu-1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">PRICE APPROVAL MANAGEMENT</a></li>
+								<li><a href="women.html">Stock Management</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<p class="bread"><span><a href="index.html">Home</a></span> / <span><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">Price Approval Management</a></span> / <span>Declined</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="colorlib-product">
+			<div class="container">
+				<div class="row row-pb-lg">
+					<div class="col-md-10 offset-md-1">
+						<div class="process-wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 20px;">
+							<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+								<p><span>@ViewBag.PendingCount</span></p>
+								<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></h3>
+							</div>
+							<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+								<p><span>@ViewBag.PendingCount</span></p>
+								<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListLive">Live</a></h3>
+							</div>
+							<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+								<p><span>@ViewBag.ApprovedCount</span></p>
+								<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListPending">Pending</a></h3>
+							</div>
+							<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+								<p><span>@ViewBag.DeclinedCount</span></p>
+								<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">Declined</a></h3>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="row row-pb-lg">
+					<div class="col-md-12">
+						<div class="product-name d-flex">
+							<div class="one-eight text-center px-4">
+								<span>Stock</span>
+							</div>
+							<div class="one-forth text-left px-4">
+								<span>Item Details</span>
+							</div>
+							<div class="one-eight text-left px-4">
+								<span>Category</span>
+							</div>
+							<div class="one-eight text-center">
+								<span>Supplier</span>
+							</div>
+							<div class="one-eight text-center">
+								<span>Price</span>
+							</div>
+							<div class="one-eight text-center">
+								<span>Quantity</span>
+							</div>
+							<div class="one-eight text-center">
+								<span>Total</span>
+							</div>
+							<div class="one-eight text-center px-4">
+								<span>Remove</span>
+							</div>
+						</div>
+
+					@if (@ViewBag.DeclinedCount==0)
+						{
+						<p style="text-align:center;">Nothing here...</p>
+						}else
+						{
+						@foreach (var item in Model.Where(i => i.approval_status == "declined" && i.username == @UserManager.GetUserName(User)))
+						{
+							<div class="product-cart d-flex">
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<h3>@item.sku</h3>
+									</div>
+								</div>
+
+								<div class="one-forth">
+										<div class="product-img" style="background-image: url('@Url.Content(@item.image_path)');"></div>
+									<div class="display-tc">
+										<h3>@item.item_name </h3>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.category </span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.username</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.price</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">quantity</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">discount_logic</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<form asp-action="ApproveStatus" asp-controller="Supplier" asp-route-sku="@item.sku" method="post">
+											<button class="changeStatusButton" style="background-color: #88c8bc;"></button>
+										</form>
+									</div>
+								</div>
+							</div>
+						}
+}
+					</div>
+				</div>
+			</div>
+		</div>

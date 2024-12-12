@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HHJCkB9gGYg=",
+  "dgSpecHash": "l2mCSQOj5s8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+  "projectFilePath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tanzh\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\tanzh\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

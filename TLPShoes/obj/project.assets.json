@@ -8012,11 +8012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+      "projectUniqueName": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
       "projectName": "TLPShoes",
-      "projectPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+      "projectPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
       "packagesPath": "C:\\Users\\tanzh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\TLP-SHOES\\TLPShoes\\obj\\",
+      "outputPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tanzh\\AppData\\Roaming\\NuGet\\NuGet.Config",

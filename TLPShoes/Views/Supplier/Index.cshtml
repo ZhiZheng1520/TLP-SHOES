@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Supplier Management";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Ensure you have a valid _Layout.cshtml
 }
 
 <div class="container mt-4">
@@ -35,7 +36,7 @@
                         <i class="bi bi-plus-circle"></i> Products
                     </h5>
                     <p class="card-text">Edit or add new products here.</p>
-                    <a asp-controller="Supplier" asp-action="EditProducts" class="btn btn-primary">Manage Products</a>
+                    <a asp-controller="Supplier" asp-action="ProductList" class="btn btn-primary">Manage Products</a>
                 </div>
             </div>
         </div>

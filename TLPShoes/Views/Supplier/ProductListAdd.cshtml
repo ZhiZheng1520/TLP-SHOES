@@ -1,0 +1,147 @@
+﻿@model TLPShoes.Models.Supply_Form
+
+@using Microsoft.AspNetCore.Identity
+@using TLPShoes.Areas.Identity.Data
+
+@inject SignInManager<TLPShoesUser> SignInManager
+@inject UserManager<TLPShoesUser> UserManager
+
+@{
+    ViewBag.Title = "Add Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Product</h2>
+
+<div id="page">
+    <nav class="colorlib-nav" role="navigation">
+        <!-- Navigation content -->
+    </nav>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="bread">
+                        <span><a href="index.html">Home</a></span> /
+                        <span><a asp-controller="Supplier" asp-action="Product">ProductListAdd</a></span> /
+                        <span>Add Product</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="colorlib-product">
+        <div class="container">
+            <div class="row row-pb-lg">
+                <div class="col-md-10 offset-md-1">
+                    <div class="process-wrap d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <div class="process text-center flex-fill" style="min-width: 150px;">
+                            <p><span>@ViewBag.PendingCount</span></p>
+                            <h3>
+                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListAdd">
+                                    Add Product
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="process text-center flex-fill" style="min-width: 150px;">
+                            <p><span>@ViewBag.PendingCount</span></p>
+                            <h3>
+                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListLive">
+                                    Live
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="process text-center flex-fill" style="min-width: 150px;">
+                            <p><span>@ViewBag.ApprovedCount</span></p>
+                            <h3>
+                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListPending">
+                                    Pending
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="process text-center flex-fill" style="min-width: 150px;">
+                            <p><span>@ViewBag.DeclinedCount</span></p>
+                            <h3>
+                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListDeclined">
+                                    Declined
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form asp-action="AddData" method="post">
+                <div class="form-group">
+                    <label asp-for="image_path">>Product Images</label>
+                    <input type="file" id="productImages" name="productImages" multiple class="form-control" accept="image/*" asp-for="image_path" required />
+                    <span asp-validation-for="image_path"></span>
+                    <small class="form-text text-muted">Supported format: 1:1 ratio recommended.</small>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="item_name">Product Name</label>
+                    <input asp-for="item_name" class="form-control" maxlength="100" required />
+                    <span asp-validation-for="item_name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="description">Description</label>
+                    <textarea asp-for="description" class="form-control" rows="5" maxlength="3000" required></textarea>
+                    <span asp-validation-for="description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="sku">SKU</label>
+                    <input asp-for="sku" class="form-control" maxlength="50" required />
+                    <span asp-validation-for="sku" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="category">Category</label>
+                    <select asp-for="category" class="form-control" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="Casual">Casual</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Dress">Dress</option>
+                    </select>
+                    <span asp-validation-for="category" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="gender">Gender</label>
+                    <select asp-for="gender" class="form-control" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <span asp-validation-for="gender" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="quantity">Quantity</label>
+                    <input asp-for="quantity" class="form-control" type="number" min="1" required />
+                    <span asp-validation-for="quantity" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="size">Size</label>
+                    <input asp-for="size" class="form-control" type="number" min="7" max="14" required />
+                    <span asp-validation-for="size" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="price">Price</label>
+                    <input asp-for="price" class="form-control" type="number" step="0.01" min="0" required />
+                    <span asp-validation-for="price" class="text-danger"></span>
+                </div>
+
+                <div class="form-group d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
