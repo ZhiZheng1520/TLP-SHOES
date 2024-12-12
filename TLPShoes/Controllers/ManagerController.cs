@@ -15,20 +15,63 @@ namespace TLPShoes.Controllers
 			_context = context;
 		}
 
+
 		public IActionResult Index()
 		{
 			return View();
 		}
 
-		public IActionResult DiscountLogic()
+		public async Task<IActionResult> DiscountLogic()
 		{
-			return View();
+			// Fetch Supply_Form
+			var Discount_Logic = await _context.Discount_Logic.ToListAsync();
+
+			return View(Discount_Logic);
 		}
 
-
-		public IActionResult StockManagement()
+		public async Task<IActionResult> EditDiscountLogic(string? dlu)
 		{
-			return View();
+
+			if (dlu == null)
+			{
+				return NotFound();
+			}
+			var Discount_Logic = await _context.Discount_Logic.FindAsync(dlu);
+
+			if (Discount_Logic == null)
+			{
+				return BadRequest(dlu + " is not found in the table!");
+			}
+
+			return View(Discount_Logic);
+		}
+
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> UpdateData(Discount_Logic Discount_Logic)
+		{
+			try
+			{
+				if (ModelState.IsValid)
+				{
+					_context.Discount_Logic.Update(Discount_Logic);
+					await _context.SaveChangesAsync();
+					return RedirectToAction("DiscountLogic", "Manager");
+				}
+				return View("DiscountLogic", Discount_Logic);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest("Error: " + ex.Message);
+			}
+		}
+
+		public async Task<IActionResult> StockManagement()
+		{
+			// Fetch Supply_Form
+			var Inventory = await _context.Inventory.ToListAsync();
+
+			return View(Inventory);
 		}
 
 		public async Task<IActionResult> PriceApproval()
@@ -106,30 +149,22 @@ namespace TLPShoes.Controllers
 			return View(Supply_Form);
 		}
 
-		public IActionResult DeclinedForm()
-		{
-			return View();
-		}
-
-		// Action to approve an item
 		[HttpPost]
-		public async Task<IActionResult> ApproveStatus(string Sku)
+		public async Task<IActionResult> ApproveStatus(string sku)
 		{
-			// Find the item by Sku
-			string skuString = Sku.ToString();  // Convert the integer Sku to a string
+			// Find the item by SKU
+			var supplyForm = await _context.Supply_Form.FirstOrDefaultAsync(s => s.sku == sku);
 
-			var Supply_Form = await _context.Supply_Form.FirstOrDefaultAsync(s => s.sku == skuString);
-
-			if (Supply_Form == null)
+			if (supplyForm == null)
 			{
 				return NotFound(); // Return NotFound if the item is not found
 			}
 
 			// Update the approval status to "Approved"
-			Supply_Form.approval_status = "approved";
+			supplyForm.approval_status = "approved";
 
 			// Save changes to the database
-			_context.Update(Supply_Form);
+			_context.Update(supplyForm);
 			await _context.SaveChangesAsync();
 
 			// Redirect back to PriceApprovalManagement
@@ -139,26 +174,40 @@ namespace TLPShoes.Controllers
 		[HttpPost]
 		public async Task<IActionResult> DeclineStatus(string sku)
 		{
-
-			// Find the item by Sku
-			string skuString = sku.ToString();  // Convert the integer Sku to a string
-												// Fetch the Supply_Form based on SKU
-			var stockDetails = await _context.Supply_Form.FirstOrDefaultAsync(s => s.sku == skuString);
+			// Fetch the stock details
+			var stockDetails = await _context.Supply_Form.FirstOrDefaultAsync(s => s.sku == sku);
 
 			if (stockDetails == null)
 			{
-				return NotFound(); // Return 404 NotFound if the item is not found
+				return NotFound("The specified item was not found.");
 			}
 
-			// Update the approval status to "Declined"
+			// Update the approval status
 			stockDetails.approval_status = "declined";
+			_context.Update(stockDetails);
 
 			// Save changes to the database
-			_context.Update(stockDetails);
 			await _context.SaveChangesAsync();
-
-			// Redirect back to PriceApproval
 			return RedirectToAction("PriceApproval");
+		}
+
+		//delete data from the page
+		public async Task<IActionResult> DeleteInventoryData(string ivt)
+		{
+			if (ivt == null)
+			{
+				return NotFound();
+			}
+
+			var iventory_item = await _context.Inventory.FindAsync(ivt);
+			if (iventory_item == null)
+			{
+				return BadRequest(ivt + " is not found in the list!");
+			}
+
+			_context.Inventory.Remove(iventory_item);
+			await _context.SaveChangesAsync();
+			return RedirectToAction("StockManagement", "Manager");
 		}
 	}
 }

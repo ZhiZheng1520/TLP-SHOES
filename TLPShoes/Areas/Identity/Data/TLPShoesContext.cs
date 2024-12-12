@@ -15,7 +15,9 @@ namespace TLPShoes.Data
         }
 
         public DbSet<Supply_Form> Supply_Form { get; set; }
+        public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Notification> Notification { get; set; }
+        public DbSet<Discount_Logic> Discount_Logic { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -271,6 +273,7 @@ namespace TLPShoes.Data
 					sku = "SK-001",
 					username = "001",
 					item_name = "Ultraboost",
+                    description = "Best shoe in the world",
 					price = 200,
 					category = "sport",
 					gender = "female",
@@ -285,6 +288,7 @@ namespace TLPShoes.Data
 					sku = "SK-002",
 					username = "002",
 					item_name = "Jordan",
+					description = "Best shoe in the world",
 					price = 300,
 					category = "dress",
 					gender = "female",
@@ -299,6 +303,7 @@ namespace TLPShoes.Data
 					sku = "SK-003",
 					username = "003",
 					item_name = "Nike Scandal",
+					description = "Best shoe in the world",
 					price = 800,
 					category = "casual",
 					gender = "female",
@@ -313,6 +318,7 @@ namespace TLPShoes.Data
 					sku = "SK-004",
 					username = "004",
 					item_name = "adidas",
+					description = "Best shoe in the world",
 					price = 75,
 					category = "casual",
 					gender = "female",
@@ -327,6 +333,86 @@ namespace TLPShoes.Data
 					sku = "SK-005",
 					username = "005",
 					item_name = "T-shirt",
+					description = "Best shoe in the world",
+					price = 25.00m,
+					category = "dress",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-13.jpg",
+					date_created = DateTime.Parse("2024-12-14 20:34:59"),
+					approval_status = "pending"
+				}
+			);
+
+			// Add Seed data here
+			modelBuilder.Entity<Inventory>().HasData(
+				new Inventory
+				{
+					ivt = "SK-001",
+					username = "001",
+					item_name = "Ultraboost",
+					description = "Best shoe in the world",
+					price = 200,
+					category = "sport",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-6.jpg",
+					date_created = DateTime.Parse("2024-12-10 15:42:34"),
+					approval_status = "declined"
+				},
+				new Inventory
+				{
+					ivt = "SK-002",
+					username = "002",
+					item_name = "Jordan",
+					description = "Best shoe in the world",
+					price = 300,
+					category = "dress",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-7.jpg",
+					date_created = DateTime.Parse("2024-12-11 10:25:47"),
+					approval_status = "approved"
+				},
+				new Inventory
+				{
+					ivt = "SK-003",
+					username = "003",
+					item_name = "Nike Scandal",
+					description = "Best shoe in the world",
+					price = 800,
+					category = "casual",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-8.jpg",
+					date_created = DateTime.Parse("2024-12-12 08:13:22"),
+					approval_status = "pending"
+				},
+				new Inventory
+				{
+					ivt = "SK-004",
+					username = "004",
+					item_name = "adidas",
+					description = "Best shoe in the world",
+					price = 75,
+					category = "casual",
+					gender = "female",
+					quantity = 100,
+					size = 7,
+					image_path = "~/assets/images/item-14.jpg",
+					date_created = DateTime.Parse("2024-12-13 18:50:05"),
+					approval_status = "approved"
+				},
+				new Inventory
+				{
+					ivt = "SK-005",
+					username = "005",
+					item_name = "T-shirt",
+					description = "Best shoe in the world",
 					price = 25.00m,
 					category = "dress",
 					gender = "female",

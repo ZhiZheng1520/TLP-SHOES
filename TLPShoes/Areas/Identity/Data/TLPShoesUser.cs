@@ -20,5 +20,7 @@ public class TLPShoesUser : IdentityUser
     [Column(TypeName = "nvarchar(100)")]
     public string Company { get; set; }
 
+
+
 }
 

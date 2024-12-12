@@ -10,7 +10,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
 						</div>
 						<div class="col-sm-5 col-md-3">
 							<form action="#" class="search-wrap">
@@ -24,10 +24,10 @@
 					<div class="row">
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
-								<li><a asp-area="" asp-controller="Manager" asp-action="Index">HOME</a></li>
+								<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
 								<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
 								<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
-								<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Discount Logic</a></li>
+								<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
 							</ul>
 						</div>
 					</div>
@@ -39,7 +39,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="index.html">Home</a></span> / <span>Price Approval Management</span></p>
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span>Price Approval Management</span></p>
 					</div>
 				</div>
 			</div>
@@ -72,14 +72,23 @@
 							<div class="one-forth text-left px-4">
 								<span>Item Details</span>
 							</div>
+							<div class="one-forth text-left px-4">
+								<span>Description</span>
+							</div>
+							<div class="one-eight text-center">
+								<span>ID</span>
+							</div>
 							<div class="one-eight text-left">
+								<span>Gender</span>
+							</div>
+							<div class="one-eight text-left">
+								<span>Supplier </span>
+							</div>
+							<div class="one-eight text-center">
+								<span>Price/Unit</span>
+							</div>
+							<div class="one-eight text-center">
 								<span>Category</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Supplier</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Price</span>
 							</div>
 							<div class="one-eight text-center">
 								<span>Quantity</span>
@@ -94,8 +103,8 @@
 								<span>Action</span>
 							</div>
 						</div>
-						
-						@if (Model == null && !Model.Any())
+
+					@if (@ViewBag.PendingCount == 0 && @ViewBag.ApprovedCount==0 && @ViewBag.DeclinedCount == 0)
 						{
 							<p style="text-align:center;">Nothing here...</p>
 						}
@@ -112,29 +121,41 @@
 									</div>
 								</div>
 
-								<div class="one-eight text-center">
+								<div class="one-forth px-4">
 									<div class="display-tc">
-										<span class="price">@item.sku</span>
+										<span class="price">@item.description</span>
 									</div>
 								</div>
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-											<span class="price">@item.category</span>
+										<span class="price">@item.sku</span>
+										</div>
+									</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.gender</span>
+									</div>
+								</div>
+
+									<div class="one-eight text-center">
+										<div class="display-tc">
+										<span class="price">@item.username</span>
 										</div>
 									</div>
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-											<span class="price">@item.username</span>
+										<span class="price">@item.price</span>
 										</div>
 									</div>
 
-									<div class="one-eight text-center">
-										<div class="display-tc">
-											<span class="price">@item.price</span>
-										</div>
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.category</span>
 									</div>
+								</div>
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
@@ -144,21 +165,27 @@
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-											<span class="price">TBC</span>
+										<span class="price">@item.size</span>
 										</div>
 									</div>
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-											<span class="price">@item.approval_status</span>
+										<span class="price">@(@item.quantity * @item.price)</span>
 										</div>
 									</div>
 
 									<div class="one-eight text-center">
 										<div class="display-tc">
-										<form asp-action="ApproveStatus" asp-controller="Managers" asp-route-sku="@item.sku">
+										<span class="price">@item.approval_status</span>
+										</div>
+									</div>
+
+									<div class="one-eight text-center">
+										<div class="display-tc">
+										<form asp-action="ApproveStatus" asp-controller="Manager" asp-route-sku="@item.sku">
 											<td><button class="changeStatusButton" style="background-color: #88c8bc;"></button></td>
-											<td><button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="EditData" asp-controller="Flowers" asp-route-FlowerId="@item.sku"></button></td>
+											<td><button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="DeclineStatus" asp-controller="Manager" asp-route-sku="@item.sku"></button></td>
 										</form>
 										</div>
 									</div>

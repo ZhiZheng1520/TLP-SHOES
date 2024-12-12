@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using TLPShoes.Areas.Identity.Data;
 using TLPShoes.Models;
 
 namespace TLPShoes.Controllers
@@ -7,14 +9,17 @@ namespace TLPShoes.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private readonly UserManager<TLPShoesUser> _userManager;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, UserManager <TLPShoesUser> userManager)
         {
             _logger = logger;
+			this._userManager = userManager;
         }
 
         public IActionResult Index()
         {
+            ViewData["UserID"] = _userManager.GetUserId(this.User);
             return View();
         }
 

@@ -9,7 +9,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
 						</div>
 						<div class="col-sm-5 col-md-3">
 							<form action="#" class="search-wrap">
@@ -24,9 +24,9 @@
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
 								<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
-								<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Approval Management</a></li>
+								<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
 								<li><a asp-area="" asp-controller="Manager" asp-action="Index">Stock Management</a></li>
-								<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
 							</ul>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span>Home</span> / <span><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></span> / <span>Pending</span></p>
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></span> / <span>Pending</span></p>
 					</div>
 				</div>
 			</div>
@@ -101,22 +101,28 @@
 							@foreach (var item in Model.Where(i => i.approval_status == "pending"))
 						{
 							<div class="product-cart d-flex">
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<h3>@item.sku</h3>
-									</div>
-								</div>
-
-								<div class="one-forth">
+								<div class="one-forth px-4">
 									<div class="product-img" style="background-image: url('@Url.Content(@item.image_path)');"></div>
 									<div class="display-tc">
-										<h3>@item.item_name </h3>
+										<h3>@item.item_name</h3>
+									</div>
+								</div>
+
+								<div class="one-forth px-4">
+									<div class="display-tc">
+										<span class="price">@item.description</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">@item.category </span>
+										<span class="price">@item.sku</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.gender</span>
 									</div>
 								</div>
 
@@ -134,21 +140,33 @@
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">quantity</span>
+										<span class="price">@item.category</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">discount_logic</span>
+										<span class="price">@item.quantity</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<form asp-action="ApproveStatus" asp-controller="Managers" asp-route-FlowerId="@item.sku">
+										<span class="price">@item.size</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@(@item.quantity * @item.price)</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<form asp-action="ApproveStatus" asp-controller="Manager" asp-route-sku="@item.sku">
 											<td><button class="changeStatusButton" style="background-color: #88c8bc;"></button></td>
-											<td><button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="EditData" asp-controller="Flowers" asp-route-FlowerId="@item.sku"></button></td>
+											<td><button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="DeclineStatus" asp-controller="Manager" asp-route-sku="@item.sku"></button></td>
 										</form>
 									</div>
 								</div>

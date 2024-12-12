@@ -1,4 +1,4 @@
-﻿@model List<Supply_Form>
+﻿@model List<Inventory>
 
 @{
 	ViewData["Title"] = "Index";
@@ -9,7 +9,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-7 col-md-9">
-						<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+					<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
 					</div>
 					<div class="col-sm-5 col-md-3">
 						<form action="#" class="search-wrap">
@@ -38,65 +38,39 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span><span></span>Stock Management</span></p>
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span>Stock Management</span></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-		<div class="colorlib-product">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-lg-3 mb-4 text-center">
-						<div class="product-entry border">
-							<a href="#" class="prod-img">
-								<img src="~/assets/images/item-1.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-								<span class="price">$139.00</span>
-								<span class="price">$139.00</span>
-								<span class="price">$139.00</span>
-								<span class="price">Button</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-lg-3 mb-4 text-center">
-						<div class="product-entry border">
-							<a href="#" class="prod-img">
-						<img src="~/assets/images/item-2.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Women's Minam Meaghan</a></h2>
-								<span class="price">$139.00</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-lg-3 mb-4 text-center">
-						<div class="product-entry border">
-							<a href="#" class="prod-img">
-						<img src="~/assets/images/item-3.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Men's Taja Commissioner</a></h2>
-								<span class="price">$139.00</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 col-lg-3 mb-4 text-center">
-						<div class="product-entry border">
-							<a href="#" class="prod-img">
-						<img src="~/assets/images/item-4.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-							</a>
-							<div class="desc">
-								<h2><a href="#">Russ Men's Sneakers</a></h2>
-								<span class="price">$139.00</span>
-							</div>
+<div class="colorlib-product">
+	<div class="container">
+		<div class="row">
+			@foreach (var product in Model)
+			{
+				<div class="col-md-3 col-lg-3 mb-4 text-center">
+					<div class="product-entry border">
+						<img src="@Url.Content(product.image_path)" class="img-fluid" alt="Free html5 bootstrap 4 template">
+						<div class="desc">
+							<h2><a href="#">@product.item_name</a></h2>
+							<span class="price">@product.ivt</span>
+							<span class="price">@product.description</span>
+							<span class="price">Category: @product.category</span>
+							<span class="price">Gender: @product.gender</span>
+							<span class="price">Price: @product.price</span>
+							<span class="price">Size: @product.size</span>
+							<span class="price" style="color:@(product.quantity < 100 ? "red" : "black")">Stock: @product.quantity</span>
+							<form asp-action="DeleteInventoryData" asp-controller="Manager" asp-route-ivt="@product.ivt">
+								<button class="delete-button">Delete</button>
+							</form>
 						</div>
 					</div>
 				</div>
-			</div>
+			}
 		</div>
+	</div>
+</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>

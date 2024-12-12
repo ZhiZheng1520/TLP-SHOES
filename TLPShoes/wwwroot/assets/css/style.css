@@ -9356,5 +9356,44 @@ input[type="text"] {
     }
 }
 
+    .changeStatusButton {
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 5px;
+    }
 
+    /* Hover effects */
+    .changeStatusButton:hover {
+        filter: brightness(90%);
+    }
 
+    /* Approve button (green) */
+    .changeStatusButton[style*="background-color: #88c8bc"]::after {
+        content: "/";
+    }
+
+    /* Decline button (red) */
+    .changeStatusButton[style*="background-color: #c88b8b"]::after {
+        content: "x";
+    }
+
+    /* External CSS */
+    .delete-stock-button {
+        background-color: #c88b8b;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+        .delete-stock-button:hover {
+            filter: brightness(90%);
+        }

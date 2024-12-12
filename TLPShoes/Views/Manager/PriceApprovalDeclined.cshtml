@@ -10,7 +10,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
 						</div>
 						<div class="col-sm-5 col-md-3">
 							<form action="#" class="search-wrap">
@@ -25,7 +25,7 @@
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
 							<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
-							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">PRICE APPROVAL MANAGEMENT</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
 							<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
 							<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
 							</ul>
@@ -68,30 +68,36 @@
 				<div class="row row-pb-lg">
 					<div class="col-md-12">
 						<div class="product-name d-flex">
-							<div class="one-eight text-center px-4">
-								<span>Stock</span>
-							</div>
-							<div class="one-forth text-left px-4">
-								<span>Item Details</span>
-							</div>
-							<div class="one-eight text-left px-4">
-								<span>Category</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Supplier</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Price</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Quantity</span>
-							</div>
-							<div class="one-eight text-center">
-								<span>Total</span>
-							</div>
-							<div class="one-eight text-center px-4">
-								<span>Remove</span>
-							</div>
+						<div class="one-forth text-left px-4">
+							<span>Item Details</span>
+						</div>
+						<div class="one-forth text-left px-4">
+							<span>Description</span>
+						</div>
+						<div class="one-eight text-center">
+							<span>ID</span>
+						</div>
+						<div class="one-eight text-left">
+							<span>Gender</span>
+						</div>
+						<div class="one-eight text-left">
+							<span>Supplier </span>
+						</div>
+						<div class="one-eight text-center">
+							<span>Price/Unit</span>
+						</div>
+						<div class="one-eight text-center">
+							<span>Category</span>
+						</div>
+						<div class="one-eight text-center">
+							<span>Quantity</span>
+						</div>
+						<div class="one-eight text-center">
+							<span>Total</span>
+						</div>
+						<div class="one-eight text-center">
+							<span>Action</span>
+						</div>
 						</div>
 
 					@if (@ViewBag.DeclinedCount==0)
@@ -102,22 +108,29 @@
 						@foreach (var item in Model.Where(i => i.approval_status == "declined"))
 						{
 							<div class="product-cart d-flex">
-								<div class="one-eight text-center">
+
+								<div class="one-forth px-4">
+									<div class="product-img" style="background-image: url('@Url.Content(@item.image_path)');"></div>
 									<div class="display-tc">
-										<h3>@item.sku</h3>
+										<h3>@item.item_name</h3>
 									</div>
 								</div>
 
-								<div class="one-forth">
-										<div class="product-img" style="background-image: url('@Url.Content(@item.image_path)');"></div>
+								<div class="one-forth px-4">
 									<div class="display-tc">
-										<h3>@item.item_name </h3>
+										<span class="price">@item.description</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">@item.category </span>
+										<span class="price">@item.sku</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.gender</span>
 									</div>
 								</div>
 
@@ -135,26 +148,46 @@
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">quantity</span>
+										<span class="price">@item.category</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<span class="price">discount_logic</span>
+										<span class="price">@item.quantity</span>
 									</div>
 								</div>
 
 								<div class="one-eight text-center">
 									<div class="display-tc">
-										<form asp-action="ApproveStatus" asp-controller="Manager" asp-route-sku="@item.sku" method="post">
-											<button class="changeStatusButton" style="background-color: #88c8bc;"></button>
+										<span class="price">@item.size</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@(@item.quantity * @item.price)</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.approval_status</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<form asp-action="ApproveStatus" asp-controller="Manager" asp-route-sku="@item.sku">
+											<td>
+												<button class="approve-button"></button>
+											</td>
 										</form>
 									</div>
 								</div>
 							</div>
 						}
-}
+					}
 					</div>
 				</div>
 			</div>

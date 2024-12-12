@@ -18,6 +18,10 @@ namespace TLPShoes.Models
 		[StringLength(100)]
 		public string item_name { get; set; }  // Name of the item
 
+		[Required]
+		[StringLength(100)]
+		public string description { get; set; }  // Name of the item
+
 		[Range(0, double.MaxValue, ErrorMessage = "Price must be a positive value.")]
 		public decimal price { get; set; }  // Price of the item
 
