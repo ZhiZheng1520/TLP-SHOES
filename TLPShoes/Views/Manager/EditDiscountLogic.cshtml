@@ -1,0 +1,99 @@
+﻿@model TLPShoes.Models.Discount_Logic
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 col-md-9">
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
+					</div>
+					<div class="col-sm-5 col-md-3">
+						<form action="#" class="search-wrap">
+							<div class="form-group">
+								<input type="search" class="form-control search" placeholder="Search">
+								<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-left menu-1">
+						<ul>
+							<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></span>/ <span>Edit Discount Logic</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="colorlib-product">
+		<div class="container">
+			<div class="row row-pb-lg">
+				<div class="col-md-12">
+					<form method="post" asp-action="UpdateData" asp-controller="Manager">
+					<div class="product-name d-flex">
+						<div class="one-eight text-left px-4">
+							<span><th><label style="border:none;" asp-for="dlu"></label></th></span>
+						</div>
+						<div class="one-eight text-left">
+								<span><th><label style="border:none;" asp-for="quantity"></label></th> </span>
+						</div>
+						<div class="one-eight text-left">
+								<span><th><label style="border:none;" asp-for="percentage"></label></th></span>
+						</div>
+					</div>
+						<div class="product-cart d-flex">
+
+							<div class="one-eight text-center">
+								<div class="display-tc">
+								<span class="price"><input asp-for="dlu" readonly /></span>
+								</div>
+							</div>
+
+							<div class="one-eight text-center">
+								<div class="display-tc">
+								<span class="price"><input asp-for="quantity" readonly /></span>
+								</div>
+							</div>
+
+							<div class="one-eight text-center">
+								<div class="display-tc">
+								<span class="price">
+									<input asp-for="percentage" />
+									<span asp-validation-for="percentage"></span></>
+								</span>
+								</div>
+							</div>
+
+							<div class="one-eight text-center">
+								<div class="display-tc">
+										<button type="submit" class="btn-info">
+											Update Discount Logic
+										</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
