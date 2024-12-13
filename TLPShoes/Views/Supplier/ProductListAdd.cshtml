@@ -1,4 +1,4 @@
-﻿@model TLPShoes.Models.Supply_Form
+@model TLPShoes.Models.Supply_Form
 
 @using Microsoft.AspNetCore.Identity
 @using TLPShoes.Areas.Identity.Data
@@ -10,8 +10,38 @@
     ViewBag.Title = "Add Product";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id="page">
+    <nav class="colorlib-nav" role="navigation">
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 col-md-9">
+                        <div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+                    </div>
+                    <div class="col-sm-5 col-md-3">
+                        <form action="#" class="search-wrap">
+                            <div class="form-group">
+                                <input type="search" class="form-control search" placeholder="Search">
+                                <button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-left menu-1">
+                        <ul>
+                            <li><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></li>
+                            <li><a asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></li>
+                            <li><a asp-area="" asp-controller="Supplier" asp-action="ProductListLive">View Listed Product</a></li>
+                            <li><a asp-area="" asp-controller="Supplier" asp-action="ProductListPending">View Pending Product</a></li>
+                            <li><a asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">View Declined Product</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<h2>Add Product</h2>
 
 <div id="page">
     <nav class="colorlib-nav" role="navigation">
@@ -23,8 +53,9 @@
             <div class="row">
                 <div class="col">
                     <p class="bread">
-                        <span><a href="index.html">Home</a></span> /
-                        <span><a asp-controller="Supplier" asp-action="Product">ProductListAdd</a></span> /
+                        <p class="bread">
+                            <span><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></span> /
+          
                         <span>Add Product</span>
                     </p>
                 </div>
@@ -32,46 +63,31 @@
         </div>
     </div>
 
-    <div class="colorlib-product">
-        <div class="container">
-            <div class="row row-pb-lg">
-                <div class="col-md-10 offset-md-1">
-                    <div class="process-wrap d-flex justify-content-between align-items-center flex-wrap gap-3">
-                        <div class="process text-center flex-fill" style="min-width: 150px;">
-                            <p><span>@ViewBag.PendingCount</span></p>
-                            <h3>
-                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListAdd">
-                                    Add Product
-                                </a>
-                            </h3>
+        <div class="colorlib-product">
+            <div class="container">
+                <div class="row row-pb-lg">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="process-wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 20px;">
+                            <div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+                                <p><span>@ViewBag.PendingCount</span></p>
+                                <h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></h3>
+                            </div>
+                            <div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+                                <p><span>@ViewBag.PendingCount</span></p>
+                                <h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListLive">Live</a></h3>
+                            </div>
+                            <div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+                                <p><span>@ViewBag.ApprovedCount</span></p>
+                                <h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListPending">Pending</a></h3>
+                            </div>
+                            <div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+                                <p><span>@ViewBag.DeclinedCount</span></p>
+                                <h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">Declined</a></h3>
+                            </div>
                         </div>
-                        <div class="process text-center flex-fill" style="min-width: 150px;">
-                            <p><span>@ViewBag.PendingCount</span></p>
-                            <h3>
-                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListLive">
-                                    Live
-                                </a>
-                            </h3>
-                        </div>
-                        <div class="process text-center flex-fill" style="min-width: 150px;">
-                            <p><span>@ViewBag.ApprovedCount</span></p>
-                            <h3>
-                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListPending">
-                                    Pending
-                                </a>
-                            </h3>
-                        </div>
-                        <div class="process text-center flex-fill" style="min-width: 150px;">
-                            <p><span>@ViewBag.DeclinedCount</span></p>
-                            <h3>
-                                <a class="nav-link text-dark" asp-controller="Supplier" asp-action="ProductListDeclined">
-                                    Declined
-                                </a>
-                            </h3>
-                        </div>
+
                     </div>
                 </div>
-            </div>
 
             <form asp-action="AddData" method="post">
                 <div class="form-group">
