@@ -2,7 +2,10 @@
 using TLPShoes.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Data.SqlTypes;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace TLPShoes.Controllers
 {
@@ -16,10 +19,49 @@ namespace TLPShoes.Controllers
 		}
 
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
-			return View();
-		}
+            // Fetch Supply_Form
+            var Supply_Form = await _context.Supply_Form.ToListAsync();
+
+            // Calculate counts for each approval status
+            var pendingCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "pending");
+            var approvedCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "approved");
+            var declinedCount = await _context.Supply_Form.CountAsync(x => x.approval_status == "declined");
+
+            // Get all users
+            var users = await _context.Users.ToListAsync();
+
+            // Calculate counts for each user role
+            var managerCount = await _context.Users.CountAsync(x => x.Role == "Manager");
+            var customerCount = await _context.Users.CountAsync(x => x.Role == "Customer");
+            var supplierCount = await _context.Users.CountAsync(x => x.Role == "Supplier");
+
+            // Calculate counts for each payment
+            var debitcreditCount = await _context.Order.CountAsync(x => x.payment_method == "Debit/Credit Card");
+            var cashCount = await _context.Order.CountAsync(x => x.payment_method == "Cash");
+            var eWalletCount = await _context.Order.CountAsync(x => x.payment_method == "E-wallet");
+
+            // Create ViewModel
+            var model = new ManagerIndex
+			{
+				Supply_Form = Supply_Form,
+				TLPShoesUser = users,
+				PendingCount = pendingCount,
+				ApprovedCount = approvedCount,
+				DeclinedCount = declinedCount,
+				ManagerCount = managerCount,
+				CustomerCount = customerCount,
+				SupplierCount = supplierCount,
+                debitcreditCount = debitcreditCount,
+                cashCount = cashCount,
+                eWalletCount = eWalletCount,
+                
+            };
+
+            return View(model);
+        }
+
 
 		public async Task<IActionResult> DiscountLogic()
 		{
@@ -200,6 +242,7 @@ namespace TLPShoes.Controllers
 			}
 
 			var iventory_item = await _context.Inventory.FindAsync(ivt);
+
 			if (iventory_item == null)
 			{
 				return BadRequest(ivt + " is not found in the list!");

@@ -1,0 +1,31 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build and output directories
+/dist/
+/build/
+
+# Ignore environment variable files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+
+# Ignore Visual Studio temporary files
+.vs/
+
+# Ignore bin and obj directories in TLPShoes project
+TLPShoes/bin/Debug/net8.0/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore temporary files
+*.tmp
