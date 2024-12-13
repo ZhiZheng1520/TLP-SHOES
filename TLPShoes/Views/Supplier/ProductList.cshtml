@@ -1,4 +1,4 @@
-﻿@model List<Supply_Form>
+@model List<Supply_Form>
 
 @{
 
@@ -24,9 +24,11 @@
 				<div class="row">
 					<div class="col-sm-12 text-left menu-1">
 						<ul>
-							<li><a asp-area="" asp-controller="Supplier" asp-action="Index">HOME</a></li>
-							<li><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">Price Approval Management</a></li>
-							<li><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">Stock Management</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListLive">View Listed Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListPending">View Pending Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">View Declined Product</a></li>
 						</ul>
 					</div>
 				</div>
@@ -38,7 +40,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<p class="bread"><span><a href="index.html">Home</a></span> / <span>Products</span></p>
+					<p class="bread"><span><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></span>/ <span>Product listing system</span></p>
 				</div>
 			</div>
 		</div>
@@ -70,118 +72,42 @@
 				</div>
 			</div>
 
-			<div class="row row-pb-lg">
-				<div class="col-md-12">
-					<div class="product-name d-flex">
-						<div class="one-forth text-left px-4">
-							<span>Item Details</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Stock</span>
-						</div>
-						<div class="one-eight text-left">
-							<span>Category</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Supplier</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Price</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Quantity</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Total</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Status</span>
-						</div>
-						<div class="one-eight text-center">
-							<span>Remove</span>
-						</div>
+			@{
+				ViewData["Title"] = "Dashboard";
+			}
+
+			
+
+				<!-- Chart Section -->
+				<div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: span 2;">
+					<div style="padding: 20px;">
+						<h4 style="font-size: 1.25rem; margin-bottom: 15px;">Number of Sales</h4>
+						<canvas id="salesChart"></canvas>
 					</div>
+				</div>
 
-					@if (Model == null && !Model.Any())
-					{
-						<p style="text-align:center;">Nothing here...</p>
-					}
-					else
-					{
-						@foreach (var item in Model)
-						{
-							<div class="product-cart d-flex">
-
-								<div class="one-forth px-4">
-									<div class="product-img" style="background-image: url('@Url.Content(@item.image_path)');"></div>
-									<div class="display-tc">
-										<h3>@item.item_name</h3>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.sku</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.category</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.username</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.price</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.quantity</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">TBC</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<span class="price">@item.approval_status</span>
-									</div>
-								</div>
-
-								<div class="one-eight text-center">
-									<div class="display-tc">
-										<form asp-action="ApproveStatus" asp-controller="Supplier" asp-route-FlowerId="@item.sku">
-											<td>
-												<!-- Button with tick/checkmark icon -->
-												<button class="changeStatusButton" style="background-color: #88c8bc;">
-													<i class="bi bi-check-circle"></i> Tick Icon
-												</button>
-											</td>
-											<td>
-												<!-- Button with cross icon -->
-												<button class="changeStatusButton" style="background-color: #c88b8b;" asp-action="EditData" asp-controller="Flowers" asp-route-FlowerId="@item.sku">
-													<i class="bi bi-x-circle"></i> Cross Icon
-												</button>
-											</td>
-										</form>
-									</div>
-								</div>
-							</div> <!-- Missing closing div for .product-cart -->
-						}
-					}
+				<!-- Stocks Table -->
+				<div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: span 2;">
+					<div style="padding: 20px;">
+						<h4 style="font-size: 1.25rem; margin-bottom: 15px;">Stocks</h4>
+						<table style="width: 100%; border-collapse: collapse;">
+							<thead>
+								<tr>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">Name</th>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">SKU</th>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">Stock</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Example Row -->
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Product A</td>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">SKU001</td>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
