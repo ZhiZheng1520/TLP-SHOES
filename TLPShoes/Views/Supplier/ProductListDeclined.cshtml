@@ -1,4 +1,4 @@
-﻿@model List<Supply_Form>
+@model List<Supply_Form>
 @using Microsoft.AspNetCore.Identity
 @using TLPShoes.Areas.Identity.Data
 
@@ -9,45 +9,47 @@
 	
 }
 
-	<div id="page">
-		<nav class="colorlib-nav" role="navigation">
-			<div class="top-menu">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
-						</div>
-						<div class="col-sm-5 col-md-3">
-							<form action="#" class="search-wrap">
-								<div class="form-group">
-									<input type="search" class="form-control search" placeholder="Search">
-									<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 text-left menu-1">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">PRICE APPROVAL MANAGEMENT</a></li>
-								<li><a href="women.html">Stock Management</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-
-		<div class="breadcrumbs">
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
 			<div class="container">
 				<div class="row">
-					<div class="col">
-						<p class="bread"><span><a href="index.html">Home</a></span> / <span><a asp-area="" asp-controller="Supplier" asp-action="PriceApproval">Price Approval Management</a></span> / <span>Declined</span></p>
+					<div class="col-sm-7 col-md-9">
+						<div id="colorlib-logo"><a href="index.cshtml">TLP Sport</a></div>
+					</div>
+					<div class="col-sm-5 col-md-3">
+						<form action="#" class="search-wrap">
+							<div class="form-group">
+								<input type="search" class="form-control search" placeholder="Search">
+								<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-left menu-1">
+						<ul>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListLive">View Listed Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListPending">View Pending Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">View Declined Product</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+	</nav>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></span> / <span>Declined Product</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 		<div class="colorlib-product">
 			<div class="container">
