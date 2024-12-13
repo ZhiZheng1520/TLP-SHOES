@@ -1,0 +1,99 @@
+﻿@model List<Discount_Logic>
+@{
+	ViewData["Title"] = "Index";
+}
+
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 col-md-9">
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Manager" asp-action="Index">TLPShoes</a></div>
+					</div>
+					<div class="col-sm-5 col-md-3">
+						<form action="#" class="search-wrap">
+							<div class="form-group">
+								<input type="search" class="form-control search" placeholder="Search">
+								<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-left menu-1">
+						<ul>
+							<li><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
+							<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span>Discount Logic</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="colorlib-product">
+		<div class="container">
+			<div class="row row-pb-lg">
+				<div class="col-md-12">
+					<div class="product-name d-flex">
+						<div class="one-eight text-left px-4">
+							<span>ID</span>
+						</div>
+						<div class="one-eight text-left">
+							<span>Quantity </span>
+						</div>
+						<div class="one-eight text-left">
+							<span>Percentage</span>
+						</div>
+					</div>
+
+						@foreach (var item in Model)
+						{
+							<div class="product-cart d-flex">
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.dlu</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.quantity</span>
+									</div>
+								</div>
+
+								<div class="one-eight text-center">
+									<div class="display-tc">
+										<span class="price">@item.percentage</span>
+									</div>
+								</div>
+
+							<div class="one-eight text-center">
+								<div class="display-tc">
+									<form asp-action="EditDiscountLogic" asp-controller="Manager" asp-route-dlu="@item.dlu">
+										<button class="changeStatusButton" style="background-color: yellow;">Edit</button>
+									</form>
+								</div>
+							</div>
+
+							</div>
+						}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

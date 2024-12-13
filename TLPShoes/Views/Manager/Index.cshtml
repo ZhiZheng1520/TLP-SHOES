@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TLPShoes.Models.ManagerIndex
+
+@{
 	ViewData["Title"] = "Index";
 }
 
@@ -25,6 +27,7 @@
 						<li><a asp-area="" asp-controller="Manager" asp-action="PriceApproval">Price Approval Management</a></li>
 						<li><a asp-area="" asp-controller="Manager" asp-action="StockManagement">Stock Management</a></li>
 						<li><a asp-area="" asp-controller="Manager" asp-action="DiscountLogic">Discount Logic</a></li>
+						
 					</ul>
 				</div>
 			</div>
@@ -36,80 +39,132 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<p class="bread"><span><a asp-area="" asp-controller="Manager" asp-action="Index">Home</a></span> / <span>Stock Management</span></p>
+				<p class="bread"><span>Home</span></p>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="colorlib-product">
-	<div class="container">
-		<div class="row">
-				<div class="col-md-3 col-lg-3 mb-4 text-center">
-					<div class="product-entry border">
-						<img src="~/asset/images/item-15.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-						<div class="desc">
-							<h2><a href="#">item_name</a></h2>
-							<span class="price">ivt</span>
-							<span class="price">description</span>
-							<span class="price">Category: category</span>
-							<span class="price">Gender: gender</span>
-							<span class="price">Price: price</span>
-							<span class="price">Size: size</span>
-							<span class="price">Stock: quantity</span>
-						</div>
-					</div>
-				</div>
+<div style="padding: 20px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 20px;">
+    <!-- Status Metrics -->
+    <div style="grid-column: span 2; display: flex; justify-content: space-around;">
+        <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; flex: 1; margin: 0 10px;">
+            <div style="padding: 20px; text-align: center;">
+                <div style="width: 60px; height: 60px; line-height: 60px; background-color: #a8a8a8; border-radius: 50%; margin: 0 auto 10px; font-size: 20px; color: white;">@Model.PendingCount</div>
+                <p><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="PriceApprovalPending">Pending</a></p>
+            </div>
+        </div>
+        <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; flex: 1; margin: 0 10px;">
+            <div style="padding: 20px; text-align: center;">
+                <div style="width: 60px; height: 60px; line-height: 60px; background-color: #88c8bc; border-radius: 50%; margin: 0 auto 10px; font-size: 20px; color: white;">@Model.ApprovedCount</div>
+                <p><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="PriceApprovalApprove">Approved</a></p>
+            </div>
+        </div>
+        <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; flex: 1; margin: 0 10px;">
+            <div style="padding: 20px; text-align: center;">
+                <div style="width: 60px; height: 60px; line-height: 60px; background-color: #c88b8b; border-radius: 50%; margin: 0 auto 10px; font-size: 20px; color: white;">@Model.DeclinedCount</div>
+                <p><a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="PriceApprovalDeclined">Declined</a></p>
+            </div>
+        </div>
+    </div>
 
-			<div class="col-md-3 col-lg-3 mb-4 text-center">
-				<div class="product-entry border">
-					<img src="~/asset/images/item-15.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-					<div class="desc">
-						<h2><a href="#">item_name</a></h2>
-						<span class="price">ivt</span>
-						<span class="price">description</span>
-						<span class="price">Category: category</span>
-						<span class="price">Gender: gender</span>
-						<span class="price">Price: price</span>
-						<span class="price">Size: size</span>
-						<span class="price">Stock: quantity</span>
-					</div>
-				</div>
-			</div>
+    <!-- Number of Users(Manager, Customer, Supplier) -->
 
-			<div class="col-md-3 col-lg-3 mb-4 text-center">
-				<div class="product-entry border">
-					<img src="~/asset/images/item-15.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-					<div class="desc">
-						<h2><a href="#">item_name</a></h2>
-						<span class="price">ivt</span>
-						<span class="price">description</span>
-						<span class="price">Category: category</span>
-						<span class="price">Gender: gender</span>
-						<span class="price">Price: price</span>
-						<span class="price">Size: size</span>
-						<span class="price">Stock: quantity</span>
-					</div>
-				</div>
-			</div>
+    <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: 1 / 2;">
+        <div style="padding: 20px;">
+            <h4 style="font-size: 1.25rem; margin-bottom: 15px;">Number of Users by Role</h4>
+            <canvas id="rolesChart"></canvas>
+        </div>
+    </div>
 
-			<div class="col-md-3 col-lg-3 mb-4 text-center">
-				<div class="product-entry border">
-					<img src="~/asset/images/item-15.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-					<div class="desc">
-						<h2><a href="#">item_name</a></h2>
-						<span class="price">ivt</span>
-						<span class="price">description</span>
-						<span class="price">Category: category</span>
-						<span class="price">Gender: gender</span>
-						<span class="price">Price: price</span>
-						<span class="price">Size: size</span>
-						<span class="price">Stock: quantity</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('rolesChart').getContext('2d');
+
+        const data = {
+            labels: ['Manager', 'Customer', 'Supplier'], // Roles
+            datasets: [{
+                label: 'Number of Users',
+                data: [@Model.ManagerCount, @Model.CustomerCount, @Model.CustomerCount], // Example data
+                backgroundColor: [
+                    '#a8a8a8', // Manager color
+                    '#88c8bc',  // Customer color
+                    '#c88b8b'   // Supplier color
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar', // Chart type: bar
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        const rolesChart = new Chart(ctx, config);
+    </script>
+
+    <!-- Total Revenue by Payment Method -->
+    <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: 1 / 2;">
+        <div style="padding: 20px;">
+            <h4 style="font-size: 1.25rem; margin-bottom: 15px;">Customer Purchases by Payment Method</h4>
+            <canvas id="revenueChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+
+        const revenueData = {
+            labels: ['Debit/Credit Card', 'Cash', 'E-wallet'],
+            datasets: [{
+                label: 'Total Revenue',
+                data: [6,5,7],
+                backgroundColor: [
+                    '#a8a8a8', // Debit/Credit Card color
+                    '#88c8bc',  // Cash color
+                    '#c88b8b'   // E-wallet color
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const revenueConfig = {
+            type: 'pie',
+            data: revenueData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                }
+            }
+        };
+
+        const revenueChart = new Chart(revenueCtx, revenueConfig);
+    </script>
 </div>
 
 <div class="gototop js-top">

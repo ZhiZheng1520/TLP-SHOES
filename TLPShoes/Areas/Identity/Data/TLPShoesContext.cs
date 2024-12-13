@@ -18,6 +18,7 @@ namespace TLPShoes.Data
         public DbSet<Inventory> Inventory { get; set; }
         public DbSet<Notification> Notification { get; set; }
         public DbSet<Discount_Logic> Discount_Logic { get; set; }
+        public DbSet<Order> Order { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -445,6 +446,65 @@ namespace TLPShoes.Data
                     percentage = 50
                 }
             );
+
+            modelBuilder.Entity<Order>().HasData(
+    new Order
+    {
+        order_id = 1,
+        username = "enyaw",
+        item_name = "UltraBoost Running Shoes",
+        size = 10,
+        quantity = 1000,
+        unit_price = 2000,
+        total_price = 2000000,
+        payment_method = "Debit/Credit Card"
+    },
+    new Order
+    {
+        order_id = 2,
+        username = "enyaw",
+        item_name = "UltraBoost Running Shoes",
+        size = 10,
+        quantity = 400,
+        unit_price = 3000,
+        total_price = 1200000,
+        payment_method = "Cash"
+    },
+    new Order
+    {
+        order_id = 3,
+        username = "johndoe",
+        item_name = "Air Max Sneakers",
+        size = 9,
+        quantity = 150,
+        unit_price = 2500,
+        total_price = 375000,
+        payment_method = "E-wallet"
+    },
+    new Order
+    {
+        order_id = 4,
+        username = "janedoe",
+        item_name = "Nike Running Shoes",
+        size = 8,
+        quantity = 300,
+        unit_price = 1800,
+        total_price = 540000,
+        payment_method = "Debit/Credit Card"
+    },
+    new Order
+    {
+        order_id = 5,
+        username = "samuel",
+        item_name = "Air Max Sneakers",
+        size = 11,
+        quantity = 500,
+        unit_price = 2200,
+        total_price = 1100000,
+        payment_method = "Cash"
+    }
+);
+
         }
     }
 }
