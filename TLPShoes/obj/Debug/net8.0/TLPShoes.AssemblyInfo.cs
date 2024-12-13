@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TLPShoes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88d22e448a33c35747e5acd28f2555387371679c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36dcb3e8d37cf8cbea8ab8c826aef29e6f014fd5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TLPShoes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TLPShoes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

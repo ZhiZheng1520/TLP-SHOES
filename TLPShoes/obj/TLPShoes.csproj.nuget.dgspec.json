@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {}
+    "C:\\Users\\user\\Downloads\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {
+    "C:\\Users\\user\\Downloads\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Downloads\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
         "projectName": "TLPShoes",
-        "projectPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
-        "packagesPath": "C:\\Users\\tanzh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanzh\\OneDrive\\Desktop\\New folder (2)\\TLP-SHOES\\TLPShoes\\obj\\",
+        "projectPath": "C:\\Users\\user\\Downloads\\TLP-SHOES\\TLPShoes\\TLPShoes.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Downloads\\TLP-SHOES\\TLPShoes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tanzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
