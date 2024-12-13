@@ -1,0 +1,117 @@
+﻿@model List<Supply_Form>
+
+@{
+
+}
+
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-7 col-md-9">
+						<div id="colorlib-logo"><a asp-area="" asp-controller="Supplier" asp-action="Index">TLP Shoes</a></div>
+					</div>
+					<div class="col-sm-5 col-md-3">
+						<form action="#" class="search-wrap">
+							<div class="form-group">
+								<input type="search" class="form-control search" placeholder="Search">
+								<button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-left menu-1">
+						<ul>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="Index">Home</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></li>
+							<li><a asp-area="" asp-controller="Supplier" asp-action="ProductList">View Listed Product</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="bread"><span><a asp-area="" asp-controller="Supplier" asp-action="ProductList">Home</a></span>/ <span>Product List</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="colorlib-product">
+		<div class="container">
+			<div class="row row-pb-lg">
+				<div class="col-md-10 offset-md-1">
+					<div class="process-wrap" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 20px;">
+						<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+							<p><span>@ViewBag.PendingCount</span></p>
+							<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListAdd">Add Product</a></h3>
+						</div>
+						<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+							<p><span>@ViewBag.PendingCount</span></p>
+							<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListLive">Live</a></h3>
+						</div>
+						<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+							<p><span>@ViewBag.ApprovedCount</span></p>
+							<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListPending">Pending</a></h3>
+						</div>
+						<div class="process text-center" style="flex: 1; text-align: center; min-width: 150px;">
+							<p><span>@ViewBag.DeclinedCount</span></p>
+							<h3><a class="nav-link text-dark" asp-area="" asp-controller="Supplier" asp-action="ProductListDeclined">Declined</a></h3>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			@{
+				ViewData["Title"] = "Dashboard";
+			}
+
+			
+
+				<!-- Chart Section -->
+				<div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: span 2;">
+					<div style="padding: 20px;">
+						<h4 style="font-size: 1.25rem; margin-bottom: 15px;">Number of Sales</h4>
+						<canvas id="salesChart"></canvas>
+					</div>
+				</div>
+
+				<!-- Stocks Table -->
+				<div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; overflow: hidden; grid-column: span 2;">
+					<div style="padding: 20px;">
+						<h4 style="font-size: 1.25rem; margin-bottom: 15px;">Stocks</h4>
+						<table style="width: 100%; border-collapse: collapse;">
+							<thead>
+								<tr>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">Name</th>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">SKU</th>
+									<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f9f9f9; font-weight: bold;">Stock</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Example Row -->
+								<tr>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Product A</td>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">SKU001</td>
+									<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
